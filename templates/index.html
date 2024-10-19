@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+</head>
+<body>
+    <h1>Diabetes Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="Pregnancies">Pregnancies:</label><br>
+        <input type="number" id="Pregnancies" name="Pregnancies" step="0.001"><br>
+        <label for="Glucose">Glucose:</label><br>
+        <input type="number" id="Glucose" name="Glucose" step="0.001"><br>
+        <label for="BloodPressure">BloodPressure:</label><br>
+        <input type="number" id="BloodPressure" name="BloodPressure" step="0.001"><br>
+        <label for="SkinThickness">SkinThickness:</label><br>
+        <input type="number" id="SkinThickness" name="SkinThickness" step="0.001"><br>
+        <label for="Insulin">Insulin:</label><br>
+        <input type="number" id="Insulin" name="Insulin" step="0.001"><br>
+        <label for="BMI">BMI:</label><br>
+        <input type="number" id="BMI" name="BMI" step="0.001"><br>
+        <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction:</label><br>
+        <input type="number" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" step="0.001"><br>
+        <label for="Age">Age:</label><br>
+        <input type="number" id="Age" name="Age"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
